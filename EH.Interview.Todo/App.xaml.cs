@@ -12,5 +12,9 @@ namespace EH.Interview.Todo
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            InitializeComponent();
+        }
     }
 }
