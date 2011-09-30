@@ -34,6 +34,11 @@ namespace EH.Interview.Todo.ViewModels
         {
             ToDoItem item = new ToDoItem(Description);
             repository.AddToDoItem(item);
+
+#if debug
+            var items = repository.LoadItems();
+            System.Windows.MessageBox.Show(string.Format("Number of items: {0}", items.Count());
+#endif
         }
 
     }
