@@ -32,13 +32,12 @@ namespace EH.Interview.Todo.ViewModels
 
         public void AddItem()
         {
-            ToDoItem item = new ToDoItem(Description);
-            repository.AddToDoItem(item);
+            //ToDoItem item = new ToDoItem(Description);
+            //repository.AddToDoItem(item);
+//            var items = repository.LoadItems();
+  //          System.Windows.MessageBox.Show(string.Format("Number of items: {0}", items.Count());
+            System.Windows.MessageBox.Show("Added item");
 
-#if debug
-            var items = repository.LoadItems();
-            System.Windows.MessageBox.Show(string.Format("Number of items: {0}", items.Count());
-#endif
         }
 
     }

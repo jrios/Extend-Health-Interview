@@ -1,4 +1,4 @@
-﻿namespace EH.Interview.Todo {
+﻿namespace EH.Interview.Todo.ViewModels {
     using System.ComponentModel.Composition;
 
     [Export(typeof(IShell))]

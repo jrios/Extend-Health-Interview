@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Caliburn.Micro;
 using StructureMap;
+using EH.Interview.Todo.ViewModels;
 
 namespace EH.Interview.Todo
 {

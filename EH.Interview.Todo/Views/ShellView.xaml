@@ -1,0 +1,16 @@
+﻿<Window x:Class="EH.Interview.Todo.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:vw="clr-namespace:EH.Interview.Todo.Views"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Caliburn To Do">
+
+	<Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <vw:AddToDoItemView Grid.Row="0" />
+        <vw:ToDoListView Grid.Row="1" />
+    </Grid>
+
+</Window>
