@@ -6,7 +6,7 @@
 
 	<Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="25" />
+            <RowDefinition Height="35" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <vw:AddToDoItemView Grid.Row="0" />

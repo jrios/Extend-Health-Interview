@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="7" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="75" />
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="Description" Grid.Column="0" Width="350" VerticalAlignment="Center" HorizontalAlignment="Left" />
-        <Button x:Name="AddItem" Grid.Column="2" Content="Add Item" VerticalAlignment="Center" HorizontalAlignment="Left" />
+        <TextBox x:Name="Description" Grid.Column="0" Margin="5" 
+                 Width="850"
+                 HorizontalAlignment="Right" />
+        <Button x:Name="AddItem" Grid.Column="2" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Content="Add Item" />
     </Grid>
 </UserControl>
