@@ -4,14 +4,15 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="7" />
-            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="130" />
         </Grid.ColumnDefinitions>
         <TextBox x:Name="Description" Grid.Column="0" Margin="5" 
-                 Width="850"
-                 HorizontalAlignment="Right" />
+                 Width="875" Height="25"
+                 VerticalAlignment="Center" HorizontalAlignment="Stretch" />
         <Button x:Name="AddItem" Grid.Column="2" 
-                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Height="55" Width="110" Margin="5"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                Foreground="White" Background="Green"
                 Content="Add Item" />
     </Grid>
 </UserControl>

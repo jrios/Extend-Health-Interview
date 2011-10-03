@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EH.Interview.Todo.Models;
-using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using EH.Interview.Todo.Data;
+using EH.Interview.Todo.Models;
+using System.Collections.Generic;
 
 namespace EH.Interview.Todo.ViewModels
 {
-    public class ToDoListViewModel
+    public class ToDoListViewModel : Screen
     {
         private readonly ToDoRepository repository;
 
@@ -17,7 +14,7 @@ namespace EH.Interview.Todo.ViewModels
         public ToDoListViewModel(ToDoRepository repository)
         {
             this.repository = repository;
-            ToDoItems = new BindableCollection<ToDoItem>();
+            ToDoItems = new BindableCollection<ToDoItem>(new List<ToDoItem> { new ToDoItem("Wash dishes"), new ToDoItem("Do laundry") });
         }
 
         public void ReloadItems()

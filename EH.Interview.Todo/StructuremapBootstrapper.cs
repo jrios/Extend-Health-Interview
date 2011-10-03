@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Caliburn.Micro;
-using StructureMap;
 using EH.Interview.Todo.ViewModels;
+using StructureMap;
+using EH.Interview.Todo.Data;
 
 namespace EH.Interview.Todo
 {
@@ -17,11 +18,9 @@ namespace EH.Interview.Todo
                     r.For<IWindowManager>().Use<WindowManager>();
                     r.For<IEventAggregator>().Use<EventAggregator>();
                     r.For<IShell>().Use<ShellViewModel>();
-                    r.Scan(scanner =>
-                    {
-                        scanner.TheCallingAssembly();
-                        scanner.WithDefaultConventions();
-                    });
+                    r.ForConcreteType<AddToDoItemViewModel>();
+                    r.ForConcreteType<ToDoListViewModel>();
+                    r.For<ToDoRepository>().Use<ToDoInMemoryRepository>();
                 });
         }
 

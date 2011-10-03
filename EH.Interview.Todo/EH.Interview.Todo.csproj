@@ -80,6 +80,9 @@
     <Compile Include="Views\AddToDoItemView.xaml.cs">
       <DependentUpon>AddToDoItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ToDoItemView.xaml.cs">
+      <DependentUpon>ToDoItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ToDoListView.xaml.cs">
       <DependentUpon>ToDoListView.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AddToDoItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToDoItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
