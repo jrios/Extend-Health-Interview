@@ -12,6 +12,6 @@
         <Button x:Name="AddItem" Grid.Column="2" 
                 Height="55" Width="110" Margin="5"
                 VerticalAlignment="Top" HorizontalAlignment="Center"
-                Content="Add Item" />
+                Content="Save Item" />
     </Grid>
 </UserControl>
