@@ -1,4 +1,5 @@
 ﻿using System;
+using Caliburn.Micro;
 
 namespace EH.Interview.Todo.ViewModels
 {
@@ -18,6 +19,11 @@ namespace EH.Interview.Todo.ViewModels
         void ItemAdded(object sender, EventArgs e)
         {
             ToDoListViewModel.ReloadItems();
+        }
+
+        public void ShowAddItemDialog()
+        {
+            IoC.Get<IWindowManager>().ShowDialog(AddToDoItemsViewModel);
         }
     }
 }

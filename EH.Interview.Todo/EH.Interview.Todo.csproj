@@ -67,16 +67,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="IShell.cs" />
+    <Compile Include="ViewModels\EditToDoItemViewModel.cs" />
+    <Compile Include="ViewModels\AddToDoItemViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="StructuremapBootstrapper.cs" />
-    <Compile Include="ViewModels\AddToDoItemViewModel.cs" />
-    <Compile Include="ViewModels\ToDoListViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\ToDoInMemoryRepository.cs" />
     <Compile Include="Data\ToDoRepository.cs" />
+    <Compile Include="ViewModels\ToDoListViewModel.cs" />
+    <Page Include="Views\EditToDoItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

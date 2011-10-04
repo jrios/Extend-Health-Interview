@@ -21,11 +21,15 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="800" />
+                            <ColumnDefinition Width="700" />
+                            <ColumnDefinition Width="100" />
                             <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="{Binding Description}" HorizontalAlignment="Left" Grid.Column="0" />
-                        <Button x:Name="RemoveItem" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"
+                        <Button x:Name="EditItem" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"
+                                    Margin="5, 0"
+                                    Width="90" Content="Edit" cal:Message.Attach="EditItem($dataContext)" />
+                        <Button x:Name="RemoveItem" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right"
                                     Margin="5, 0"
                                     Width="90" Content="Remove" cal:Message.Attach="RemoveItem($dataContext)" />
                     </Grid>

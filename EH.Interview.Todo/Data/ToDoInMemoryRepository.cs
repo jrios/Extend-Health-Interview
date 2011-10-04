@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EH.Interview.Todo.Models;
 
 namespace EH.Interview.Todo.Data
@@ -25,6 +27,11 @@ namespace EH.Interview.Todo.Data
         public IEnumerable<ToDoItem> LoadItems()
         {
             return items;
+        }
+
+        public ToDoItem FindItem(Guid id)
+        {
+            return items.FirstOrDefault(tdi => tdi.ID == id);
         }
     }
 }

@@ -7,11 +7,13 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="65" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />            
+            <RowDefinition Height="45" />
         </Grid.RowDefinitions>
-        <ContentControl x:Name="AddToDoItemsViewModel" Grid.Row="0" />
-        <ContentControl x:Name="ToDoListViewModel" Grid.Row="1" />
+        <ContentControl x:Name="ToDoListViewModel" Grid.Row="0" />
+        <Button x:Name="ShowAddItemDialog" HorizontalAlignment="Right"
+                Margin="5" Height="35" Width="65" Grid.Row="1" 
+                Content="Add Items" />
     </Grid>
     
 </Window>

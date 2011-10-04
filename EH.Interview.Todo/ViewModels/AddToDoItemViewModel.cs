@@ -14,6 +14,7 @@ namespace EH.Interview.Todo.ViewModels
 
         public AddToDoItemViewModel(ToDoRepository repository)
         {
+            this.DisplayName = "What do you need to do?";
             this.repository = repository;
         }
 

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
 using EH.Interview.Todo.Data;
 using EH.Interview.Todo.Models;
+using NUnit.Framework;
 
 namespace EH.Interview.Tests
 {
@@ -62,6 +60,27 @@ namespace EH.Interview.Tests
             var items = repository.LoadItems();
 
             Assert.AreEqual(0, items.Count());
+        }
+
+        [Test]
+        public void should_return_null_if_no_item_found()
+        {
+            var item = new ToDoItem("Wash dishes");
+            repository.AddToDoItem(item);
+            var foundItem = repository.FindItem(new Guid());
+
+            Assert.IsNull(foundItem);
+        }
+
+        [Test]
+        public void should_return_correct_item_if_item_is_found()
+        {
+            var item = new ToDoItem("Wash dishes");
+            repository.AddToDoItem(item);
+
+            var foundItem = repository.FindItem(item.ID);
+
+            Assert.AreSame(item, foundItem);
         }
     }
 }

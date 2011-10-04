@@ -28,5 +28,11 @@ namespace EH.Interview.Todo.ViewModels
             ToDoItems.Remove(itemToBeRemoved);
             repository.RemoveItem(itemToBeRemoved);
         }
+
+        public void EditItem(ToDoItem itemToBeEdited)
+        {
+            var editToDoItemViewModel = new EditToDoItemViewModel(repository) { Description = itemToBeEdited.Description, ID = itemToBeEdited.ID };
+            IoC.Get<IWindowManager>().ShowDialog(editToDoItemViewModel);
+        }
     }
 }

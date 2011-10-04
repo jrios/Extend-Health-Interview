@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EH.Interview.Todo.Models;
 
 namespace EH.Interview.Todo.Data
@@ -8,5 +9,6 @@ namespace EH.Interview.Todo.Data
         void AddToDoItem(ToDoItem item);
         void RemoveItem(ToDoItem item);
         IEnumerable<ToDoItem> LoadItems();
+        ToDoItem FindItem(Guid id);
     }
 }
