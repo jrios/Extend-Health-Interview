@@ -77,24 +77,11 @@
     </Compile>
     <Compile Include="Data\ToDoInMemoryRepository.cs" />
     <Compile Include="Data\ToDoRepository.cs" />
-    <Compile Include="Views\AddToDoItemView.xaml.cs">
-      <DependentUpon>AddToDoItemView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ToDoItemView.xaml.cs">
-      <DependentUpon>ToDoItemView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ToDoListView.xaml.cs">
-      <DependentUpon>ToDoListView.xaml</DependentUpon>
-    </Compile>
     <Page Include="Views\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AddToDoItemView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ToDoItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

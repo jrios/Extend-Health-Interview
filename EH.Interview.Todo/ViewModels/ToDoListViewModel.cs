@@ -1,7 +1,6 @@
 ﻿using Caliburn.Micro;
 using EH.Interview.Todo.Data;
 using EH.Interview.Todo.Models;
-using System.Collections.Generic;
 
 namespace EH.Interview.Todo.ViewModels
 {
@@ -14,7 +13,7 @@ namespace EH.Interview.Todo.ViewModels
         public ToDoListViewModel(ToDoRepository repository)
         {
             this.repository = repository;
-            ToDoItems = new BindableCollection<ToDoItem>(new List<ToDoItem> { new ToDoItem("Wash dishes"), new ToDoItem("Do laundry") });
+            ToDoItems = new BindableCollection<ToDoItem>();
         }
 
         public void ReloadItems()

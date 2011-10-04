@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Caliburn.Micro;
+using EH.Interview.Todo.Data;
 using EH.Interview.Todo.ViewModels;
 using StructureMap;
-using EH.Interview.Todo.Data;
 
 namespace EH.Interview.Todo
 {

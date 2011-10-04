@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using EH.Interview.Todo.ViewModels;
+﻿using System.Linq;
 using EH.Interview.Todo.Data;
+using EH.Interview.Todo.ViewModels;
+using NUnit.Framework;
 
 namespace EH.Interview.Tests.ViewModels
 {

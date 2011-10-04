@@ -1,57 +1,23 @@
-﻿using Caliburn.Micro;
-using EH.Interview.Todo.Data;
-using EH.Interview.Todo.Models;
+﻿using System;
 
 namespace EH.Interview.Todo.ViewModels
 {
-    public class ShellViewModel : PropertyChangedBase, IShell 
+    public class ShellViewModel : IShell 
     {
-        private readonly ToDoRepository repository;
-        private string description;
+        public AddToDoItemViewModel AddToDoItemsViewModel { get; private set; }
+        public ToDoListViewModel ToDoListViewModel { get; private set; }
 
-        public ShellViewModel(ToDoRepository repository)
+        public ShellViewModel(AddToDoItemViewModel addItemsViewModel, ToDoListViewModel listViewModel)
         {
-            this.repository = repository;
-            ToDoItems = new BindableCollection<ToDoItem>();
+            AddToDoItemsViewModel = addItemsViewModel;
+            ToDoListViewModel = listViewModel;
+
+            AddToDoItemsViewModel.ItemAdded += ItemAdded;
         }
 
-        public BindableCollection<ToDoItem> ToDoItems { get; private set; }
-
-        public string Description
+        void ItemAdded(object sender, EventArgs e)
         {
-            get { return description; }
-            set
-            {
-                description = value;
-                NotifyOfPropertyChange(() => Description);
-                NotifyOfPropertyChange(() => CanAddItem);
-            }
-        }
-
-        public bool CanAddItem
-        {
-            get { return !string.IsNullOrEmpty(Description); }
-        }
-
-        public void AddItem()
-        {
-            ToDoItem item = new ToDoItem(Description);
-            repository.AddToDoItem(item);
-            Description = string.Empty;
-            ReloadItems();
-        }
-
-        public void ReloadItems()
-        {
-            ToDoItems.Clear();
-            var reloadedItems = repository.LoadItems();
-            ToDoItems.AddRange(reloadedItems);
-        }
-
-        public void RemoveItem(ToDoItem itemToBeRemoved)
-        {
-            ToDoItems.Remove(itemToBeRemoved);
-            repository.RemoveItem(itemToBeRemoved);
+            ToDoListViewModel.ReloadItems();
         }
     }
 }
